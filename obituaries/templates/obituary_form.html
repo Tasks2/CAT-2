@@ -86,25 +86,25 @@
 <script>
     //Form Validation
     function validateForm(){
-        var iname = document.forms['obituaryForm']['name'].value;
-        var dob = document.forms['obituaryForm']['date_of_birth'].value;
-        var dod = document.forms['obituaryForm']['date_of_death'].value;
+        var name = document.forms['obituaryForm']['name'].value;
+        var date_of_birth = document.forms['obituaryForm']['date_of_birth'].value;
+        var date_of_death = document.forms['obituaryForm']['date_of_death'].value;
         var author = document.forms['obituaryForm']['author'].value;
         var content = document.forms['obituaryForm']['content'].value;
 
-        if (iname == null || iname == "") {
+        if (name == null || name == "") {
             alert("Name can't be blank");
             return false;
         }
-        if (dob == null) {
+        if (date_of_birth == null) {
             alert("Date of birth can't be blank");
             return false;
         }
-        if (dod == null) {
+        if (date_of_death == null) {
             alert("Date of birth can't be blank");
             return false;
         }
-        if(new Date(dod) < new Date(dob)){
+        if(new Date(date_of_death) < new Date(date_of_birth)){
             alert("Date of death can't be earlier than date of birth!");
             return false;
         }
