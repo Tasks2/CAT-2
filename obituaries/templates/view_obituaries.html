@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Obituary Platform">
+  <meta name="description" content="Submit and view obituaries online.">
+  <meta name="keywords" content="obituaries, memorial, tribute, SEO, social media">
+    <title>Retrieve Obituaries</title>
+
+    <style>
+      table{
+        margin-top: 5px;
+      }
+      table,  th, td{
+        border: solid black ;
+        border-collapse: collapse;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+      }
+      th, td{
+        color:rgb(27, 81, 10);
+      }
+      a{
+        text-decoration: none;
+        margin: 7px;
+        padding: 4px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+      }
+    </style>
+</head>
+<body>
+  <div>
+    <a href="http://www.facebook.com/sharer.php?u=http://yourdomain.com" target="_blank">Share on Facebook</a>
+    <a href="http://twitter.com/share?url=http://yourdomain.com&text=Check out this obituary" target="_blank">Share on Twitter</a>
+  </div>
+  
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Date of Death</th>
+          <th>Content</th>
+          <th>Author</th>
+          <th>Submission Date</th>
+        </tr>
+        {% for obituary in obituaries %}
+        <tr>
+          <td>{{ obituary.name }}</td>
+          <td>{{ obituary.date_of_birth }}</td>
+          <td>{{ obituary.date_of_death }}</td>
+          <td>{{ obituary.content }}</td>
+          <td>{{ obituary.author }}</td>
+          <td>{{ obituary.submission_date }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      
+</body>
+</html>
